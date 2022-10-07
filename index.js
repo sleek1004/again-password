@@ -7,13 +7,14 @@ let genBtn = document.getElementById("gen-btn")
 
 
 genBtn.addEventListener("click", function (){
-    characters.push(show1EL.value)
-    show1EL.innerHTML = show1EL
+    //characters.push(show1EL.value)
+    let randomIndexOne = Math.floor(Math.random() * characters.length)
+    let randomIndexTwo = Math.floor(Math.random() * characters.length)
+
+    show1EL.textContent = characters[randomIndexOne]
+    show2EL.textContent = characters[randomIndexTwo]
 })
 
-function getCharacters(){
-    let randomIndex = Math.floor(Math.random() * characters.length)
-    return characters[randomIndex] 
-    
-}
-console.log(getCharacters())
+
+
+
