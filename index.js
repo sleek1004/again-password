@@ -5,14 +5,17 @@ let show2EL = document.getElementById("show2-el")
 let genBtn = document.getElementById("gen-btn")
 
 
+getRandomCharacters(){
+    const characterArrays = characters 
+}
 
 genBtn.addEventListener("click", function (){
     //characters.push(show1EL.value)
-    let randomIndexOne = Math.floor(Math.random() * characters.length)
-    let randomIndexTwo = Math.floor(Math.random() * characters.length)
+    let randomIndexOne = Math.floor(Math.random() * charactersArrays.length)
+    let randomIndexTwo = Math.floor(Math.random() * charactersArrays.length)
 
-    show1EL.textContent = characters[randomIndexOne]
-    show2EL.textContent = characters[randomIndexTwo]
+    show1EL.textContent = charactersArrays[randomIndexOne]
+    show2EL.textContent = charactersArrays[randomIndexTwo]
 })
 
 
