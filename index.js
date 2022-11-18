@@ -5,19 +5,48 @@ let show2EL = document.getElementById("show2-el")
 let genBtn = document.getElementById("gen-btn")
 
 
-getRandomCharacters(){
-    const characterArrays = characters 
-}
+  for(let i=0; i<5; i++){
+        let character = characters[Math.floor(Math.random()* characters.length )]
+     
+        show1EL.textContent = characters[character]
+       
+   }
+
 
 genBtn.addEventListener("click", function (){
-    //characters.push(show1EL.value)
-    let randomIndexOne = Math.floor(Math.random() * charactersArrays.length)
-    let randomIndexTwo = Math.floor(Math.random() * charactersArrays.length)
+    //for(let i=0; i<5; i++){
+        //let character = characters[Math.floor(Math.random()* characters.length )]
+     
+        //show1EL.textContent = characters[character]
+   // }
+    let randomIndexOne = Math.floor(Math.random() * characters.length)
+    let randomIndexTwo = Math.floor(Math.random() * characters.length)
 
-    show1EL.textContent = charactersArrays[randomIndexOne]
-    show2EL.textContent = charactersArrays[randomIndexTwo]
+    show1EL.textContent = characters[randomIndexOne]
+    
 })
 
+
+
+const originalArray=["a","b","c","d","e","f","g","h","i"];
+
+
+function RandomElements(n){
+  const newArray = []
+
+    if (n>originalArray.length) {
+        return originalArray;
+    }
+    else {
+      for(let i = 0; i < n; i++){
+    newArray.push(originalArray[Math.floor(Math.random() * originalArray.length)])
+  }
+  return newArray;
+    }
+    show2EL.textContent = originalArray[newArray]
+}
+
+console.log(RandomElements(2))
 
 
 
