@@ -9,8 +9,10 @@ let genBtn = document.getElementById("gen-btn")
         let character = characters[Math.floor(Math.random()* characters.length )]
      
         show1EL.textContent = characters[character]
+        console.log(character)
        
    }
+  
 
 
 genBtn.addEventListener("click", function (){
@@ -23,6 +25,7 @@ genBtn.addEventListener("click", function (){
     let randomIndexTwo = Math.floor(Math.random() * characters.length)
 
     show1EL.textContent = characters[randomIndexOne]
+    show2EL.textContent = characters[randomIndexTwo]
     
 })
 
