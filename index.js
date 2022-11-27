@@ -4,52 +4,63 @@ let show1EL = document.getElementById("show1-el")
 let show2EL = document.getElementById("show2-el")
 let genBtn = document.getElementById("gen-btn")
 
+//SECOND TRYING
 
-  for(let i=0; i<5; i++){
-        let character = characters[Math.floor(Math.random()* characters.length )]
+//genBtn.addEventListener("click", function (){
+
+
+  //for(let i=0; i<5; i++){
+        //let character = characters[Math.floor(Math.random()* characters.length )]
      
-        show1EL.textContent = characters[character]
-        console.log(character)
-       
-   }
+        //show3EL.textContent = character[characters]
+        
+
+  // }
+  //})
   
 
+//FIRST TRYING//
 
-genBtn.addEventListener("click", function (){
+
+//genBtn.addEventListener("click", function (){
     //for(let i=0; i<5; i++){
         //let character = characters[Math.floor(Math.random()* characters.length )]
      
         //show1EL.textContent = characters[character]
    // }
-    let randomIndexOne = Math.floor(Math.random() * characters.length)
-    let randomIndexTwo = Math.floor(Math.random() * characters.length)
+    //let randomIndexOne = Math.floor(Math.random() * characters.length)
+   // let randomIndexTwo = Math.floor(Math.random() * characters.length)
 
     show1EL.textContent = characters[randomIndexOne]
-    show2EL.textContent = characters[randomIndexTwo]
+    //show2EL.textContent = characters[randomIndexTwo]
     
-})
+//})
 
 
+//ThIRD TRYING
 
-const originalArray=["a","b","c","d","e","f","g","h","i"];
+
+genBtn.addEventListener("click", function(){
+
+
 
 
 function RandomElements(n){
   const newArray = []
 
-    if (n>originalArray.length) {
-        return originalArray;
+    if (n>characters.length) {
+        return characters;
     }
     else {
       for(let i = 0; i < n; i++){
-    newArray.push(originalArray[Math.floor(Math.random() * originalArray.length)])
+    newArray.push(characters[Math.floor(Math.random() * characters.length)])
   }
   return newArray;
     }
-    show2EL.textContent = originalArray[newArray]
+    //show2EL.textContent = characters[newArray]
 }
+show1EL.textContent = (RandomElements(6))
+show2EL.textContent = (RandomElements(6))
 
-console.log(RandomElements(2))
-
-
+})
 
