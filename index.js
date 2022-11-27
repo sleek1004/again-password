@@ -31,7 +31,7 @@ let genBtn = document.getElementById("gen-btn")
     //let randomIndexOne = Math.floor(Math.random() * characters.length)
    // let randomIndexTwo = Math.floor(Math.random() * characters.length)
 
-    show1EL.textContent = characters[randomIndexOne]
+    //show1EL.textContent = characters[randomIndexOne]
     //show2EL.textContent = characters[randomIndexTwo]
     
 //})
